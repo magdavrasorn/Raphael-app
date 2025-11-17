@@ -1,4 +1,25 @@
-/* .hey {
+.status {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: blue;
+}
+
+.square {
+  width: 5rem;
+  height: 5rem;
   font-size: 3rem;
-} */
- 
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: blue;
+}
+
+.boardRow {
+  display: flex;
+  justify-content: center;
+}
