@@ -1,9 +1,62 @@
-import styles from "./page.module.css";
+"use client";
 
-export default function Demos() {
-  return (
-    <main>
-      <h1 className={styles.hey}>Hey</h1>
-    </main>
-  );
+import { get } from "http";
+import styles from "./page.module.css";
+import { useEffect } from "react";
+import { useState } from "react";
+
+const BASE_URL = "https://collectionapi.metmuseum.org/public/collection/v1";
+
+export default function ArtPage() {
+
+}
+
+async function getArtData(departmentId: string, count: number) {
+  try {
+    const ids = await getIDs(departmentId, count);
+    const artData = [];
+
+    for (const id of ids) {
+      const objectResponse = await fetch(BASE_URL + "/objects/" + id);
+      if (!objectResponse.ok) {
+        throw new Error("Failed to fetch art data for ID: " + id);
+      }
+      const objectData = await objectResponse.json();
+      if (objectData) {
+        artData.push(objectData);
+      }
+    }
+    return artData;
+
+  } catch (error) {
+    console.error("Error fetching art data:", error);
+    return [];
+  }
+}
+
+async function getIDs(departmentId: string, count: number) {
+  try {
+    const objectsResponse = await fetch(BASE_URL + "/objects?departmentIds=" + departmentId);
+    if (!objectsResponse.ok) {
+      throw new Error("Failed to fetch object IDs of departmentIds: " + departmentId);
+    }
+    const objectsData = await objectsResponse.json();
+
+    const objectIDs = objectsData.objectIDs;
+    if (!objectIDs || objectIDs.length === 0) {
+      return [];
+    }
+    const selectedIDs = [];
+    for (let i = 0; selectedIDs.length < count; i++) {
+      const randomIndex = Math.floor(Math.random() * objectIDs.length);
+      const randomID = objectIDs[randomIndex];
+      if (!selectedIDs.includes(randomID)) {
+        selectedIDs.push(randomID);
+      }
+    }
+    return selectedIDs;
+  } catch (error) {
+    console.error("Error fetching art data:", error);
+    return [];
+  }
 }
