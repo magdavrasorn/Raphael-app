@@ -17,7 +17,7 @@ export default function ArtPage() {
   
     async function loadArtData() {
       try {
-        const departmentId = "11"; // Example: European Paintings
+        const departmentId = "11";
         const count = 10;
         const departmentResponse = await fetch(BASE_URL + "/departments");
         if (!departmentResponse.ok) {
@@ -61,8 +61,22 @@ export default function ArtPage() {
     return (
     <main className={styles.main}>
       <h1>Art from Department: {departmentTitle}</h1>
+      <div className={styles.grid}>
+        {artData.map((artObject) => (
+          <div key={artObject.objectID}>
+            <h2 className={styles.artTitles}>
+              {artObject.title}
+            </h2>
+            <img className={styles.artImage} src={artObject.primaryImage} alt={artObject.title}/>
+            <h3 className={styles.artArtistName}>
+              {artObject.artistDisplayName}
+            </h3>
+          </div>
+          ))
+        }
+      </div>
     </main>
-  );
+    );
   }
 }
 
