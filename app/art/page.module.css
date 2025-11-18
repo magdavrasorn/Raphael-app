@@ -1,0 +1,9 @@
+.grid {
+    display: flexbox;
+    font-size: small;
+    text-align: center;
+}
+
+.artTitles {
+    font-style: italic;
+}

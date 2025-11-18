@@ -60,7 +60,7 @@ export default function ArtPage() {
     
     return (
     <main className={styles.main}>
-      <h1>Art from Department: {departmentTitle}</h1>
+      <h1>Art from the Department of {departmentTitle}</h1>
       <div className={styles.grid}>
         {artData.map((artObject) => (
           <div key={artObject.objectID}>
@@ -71,6 +71,9 @@ export default function ArtPage() {
             <h3 className={styles.artArtistName}>
               {artObject.artistDisplayName}
             </h3>
+            <h4 className={styles.artFurtherInfo}>
+              Technic: {artObject.medium} - Art Begin and End Dates: {artObject.objectBeginDate} to {artObject.objectEndDate} - Dimensions: {artObject.dimensions}
+            </h4>
           </div>
           ))
         }
