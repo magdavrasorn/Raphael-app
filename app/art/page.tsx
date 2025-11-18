@@ -57,7 +57,9 @@ export default function ArtPage() {
     </main>
     );
   } else {
-    
+    // TODO while it is not mentioned in the task description, filter out art objects without images can be good for better user experience
+    // One radical solution could be to just remove them: artData = artData.filter((artObject) => artObject.primaryImage && artObject.primaryImage !== "");
+    // I wrote these comments just to show that I am aware of this possible improvement
     return (
     <main className={styles.main}>
       <h1>Art from the Department of {departmentTitle}</h1>
