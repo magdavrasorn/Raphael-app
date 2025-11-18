@@ -65,7 +65,7 @@ export default function ArtPage() {
       <h1>Art from the Department of {departmentTitle}</h1>
       <div className={styles.grid}>
         {artData.map((artObject) => (
-          <div key={artObject.objectID}>
+          <div key={artObject.objectID} className={styles.card}>
             <h2 className={styles.artTitles}>
               {artObject.title}
             </h2>
