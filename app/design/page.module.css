@@ -1,0 +1,266 @@
+.frame7 {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.25rem;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+.frame2 {
+  display: flex;
+  width: 22.9375rem;
+  height: 54.5625rem;
+  padding: 17.6875rem 0 6.1875rem 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9375rem;
+  flex-shrink: 0;
+}
+
+.frame2Image {
+  width: 12.375rem;
+  height: 12.4375rem;
+  flex-shrink: 0;
+  aspect-ratio: 198/199;
+}
+
+.mainTitle {
+height: 6.25rem;
+flex-shrink: 0;
+align-self: stretch;
+color: #000;
+text-align: center;
+font-family: TheBasics;
+font-size: 6rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.secondTitle {
+align-self: stretch;
+color: #000;
+/* text-align: right; */
+font-family: EditorSans;
+font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: 98%; /* 3.92rem */
+}
+
+.grayTextTitle {
+align-self: stretch;
+color: #837872;
+text-align: center;
+font-family: EditorSans;
+font-size: 1.25rem;
+font-style: italic;
+font-weight: 600;
+line-height: 120%; /* 1.5rem */
+}
+
+.grayText {
+align-self: stretch;
+color: #837872;
+text-align: center;
+font-family: EditorSans;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 200;
+line-height: 120%;
+}
+
+.substractDesign{
+  display: grid;
+  place-items: center;
+}
+
+.rectangleSubstract {
+grid-area: 1 / 1;
+width: 25.1875rem;
+height: 25.1875rem;
+background: #F00;
+}
+
+.ellipse {
+  grid-area: 1 / 1;
+  width: 21.3125rem;
+  height: 21.3125rem;
+  border-radius: 21.3125rem;
+  background: #FFF;
+}
+
+.textAfterSubstract {
+  align-self: stretch;
+  /* text-align: right; */
+}
+
+.regularOblic {
+  color: #000;
+
+/* טקסט גדול רץ */
+font-family: EditorSans;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 300;
+line-height: 120%;
+}
+
+.regularOblicBold {
+  color: #000;
+
+/* הדגשה */
+font-family: EditorSans;
+font-size: 2.5rem;
+font-style: italic;
+font-weight: 700;
+line-height: 120%;
+}
+
+.unionDesign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.94rem;
+}
+
+.polygon{
+  width: 0rem;
+  height: 0rem;
+  border-top-width: 11.8rem;
+  border-left-width: 12.875rem;
+  border-right-width: 12.875rem;
+  border-style: solid;
+  border-top-color: #F00;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-width: 0rem;
+  max-width: 100%;
+}
+
+.rectangleUnion {
+  width: 4.625rem;
+  height: 12.6875rem;
+  background: #F00;
+}
+
+.textAfterUnionDesign {
+align-self: stretch;
+}
+
+.regularOblicBullet {
+  font-family: EditorSans;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 300;
+line-height: 120%;
+
+}
+
+.regularOblic strong {
+font-family: EditorSans;
+font-size: 2.5rem;
+font-style: italic;
+font-weight: 700;
+line-height: 120%;
+}
+
+.frame4 {
+  display: flex;
+  width: 92.8125rem;
+  padding: 10.4375rem 0 7rem 0;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #F5F5F5 0%, #F00 46.63%, #F5F5F5 100%);
+}
+
+.regularOblicBulletBold {
+  font-family: EditorSans;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 300;
+line-height: 120%;
+}
+
+.regularOblicBulletBold::marker {
+  color: black;
+}
+
+.regularOblicBulletBold strong {
+  font-family: EditorSans;
+font-size: 2.5rem;
+font-style: italic;
+font-weight: 700;
+line-height: 120%;
+}
+
+.regularOblicBullet::marker {
+  font-size: 0.7em; /* Smaller than the text size */
+  color: black;
+}
+
+.subBullet {
+  list-style-type: disc;
+}
+
+.boldBullet {
+  list-style-type: disc;
+}
+
+.unionDesign2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.polygon2{
+  width: 0rem;
+  height: 0rem;
+  border-top-width: 12.85rem;
+  border-bottom-width: 12.85rem;
+  border-right-width: 12.8rem;
+  border-left-width: 0rem;
+  border-style: solid;
+  border-right-color: #F00;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.polygon3 {
+  width: 0rem;
+  height: 0rem;
+  border-top-width: 12.85rem;
+  border-bottom-width: 12.85rem;
+  border-left-width: 12.8rem;
+  border-right-width: 0rem;
+  border-style: solid;
+  border-left-color: #F00;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.rectangleBeforeEnd {
+  width: 18.8125rem;
+height: 18.8125rem;
+transform: rotate(45deg);
+flex-shrink: 0;
+background: #F00;
+}
+
+/* On screens smaller than 450px (most phones) */
+@media (max-width: 450px) {
+.frame7 {
+    zoom: 0.85; /* Scales the entire container down to 85% */
+  }
+}
+
+/* On really small screens */
+@media (max-width: 350px) {
+.frame7 {
+    zoom: 0.65; /* Scales the entire container down to 85% */
+  }
+}
